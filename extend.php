@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace DefenderVex\\BBExtend;
+namespace DefenderVex\BBExtend;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
