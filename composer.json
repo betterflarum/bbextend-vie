@@ -1,0 +1,54 @@
+{
+    "name": "defendervex/bbextend",
+    "description": "Add new BBCode options and editor buttons.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "DefenderVex",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DefenderVex\\BBExtend\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBExtend",
+            "category": "",
+            "icon": {
+                "name": "",
+                "color": "",
+                "backgroundColor": ""
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": false,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": true,
+                "backendTesting": false,
+                "editorConfig": false,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
