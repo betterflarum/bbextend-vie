@@ -33,5 +33,9 @@ return [
 			'[hr]',
 			'<hr style="border-top: 1px solid var(--muted-color);">'
 		);
+		$config->BBCodes->addCustom(
+			'[indent={NUMBER}]{TEXT}[/indent]',
+			'<div style="padding-left: {NUMBER}px;">{TEXT}</div>'
+		);
 	})
 ];

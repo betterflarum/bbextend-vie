@@ -5,10 +5,6 @@ import TextEditorButton from 'flarum/common/components/TextEditorButton';
 
 app.initializers.add('defendervex/bbextend', () => {
 	extend(TextEditor.prototype, 'toolbarItems', function(items) {
-		items.add('bbextend-spacer1', (
-			<li></li>
-		));
-
 		items.add('bbextend-bold', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[b][/b]')} icon="fas fa-bold">
 				Bold
@@ -30,10 +26,6 @@ app.initializers.add('defendervex/bbextend', () => {
 			</TextEditorButton>
 		));
 
-		items.add('bbextend-spacer2', (
-			<li></li>
-		));
-
 		items.add('bbextend-align-center', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[center][/center]')} icon="fas fa-align-center">
 				Center
@@ -50,8 +42,10 @@ app.initializers.add('defendervex/bbextend', () => {
 			</TextEditorButton>
 		));
 
-		items.add('bbextend-spacer3', (
-			<li></li>
+		items.add('bbextend-indent', (
+			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[indent=20][/indent]')} icon="fas fa-indent">
+				Indent
+			</TextEditorButton>
 		));
 
 		items.add('bbextend-size', (
@@ -65,10 +59,6 @@ app.initializers.add('defendervex/bbextend', () => {
 			</TextEditorButton>
 		));
 
-		items.add('bbextend-spacer4', (
-			<li></li>
-		));
-
 		items.add('bbextend-code', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[code][/code]')} icon="fas fa-code">
 				Code
@@ -79,6 +69,7 @@ app.initializers.add('defendervex/bbextend', () => {
 				Quote
 			</TextEditorButton>
 		));
+
 		items.add('bbextend-hr', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[hr]')} icon="fas fa-minus">
 				Horizontal Rule

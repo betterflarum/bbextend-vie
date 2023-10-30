@@ -23,11 +23,11 @@
     "extra": {
         "flarum-extension": {
             "title": "BBExtend",
-            "category": "",
+            "category": "feature",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-bars-staggered",
+                "color": "#22242b",
+                "backgroundColor": "#f89140"
             }
         },
         "flarum-cli": {

@@ -25,7 +25,6 @@ __webpack_require__.r(__webpack_exports__);
 flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defendervex/bbextend', function () {
   (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default().prototype), 'toolbarItems', function (items) {
     var _this = this;
-    items.add('bbextend-spacer1', m("li", null));
     items.add('bbextend-bold', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[b][/b]');
@@ -50,7 +49,6 @@ flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defend
       },
       icon: "fas fa-strikethrough"
     }, "Strikethrough"));
-    items.add('bbextend-spacer2', m("li", null));
     items.add('bbextend-align-center', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[center][/center]');
@@ -69,7 +67,12 @@ flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defend
       },
       icon: "fas fa-align-justify"
     }, "Justify"));
-    items.add('bbextend-spacer3', m("li", null));
+    items.add('bbextend-indent', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
+      onclick: function onclick() {
+        return _this.attrs.composer.editor.insertAtCursor('[indent=20][/indent]');
+      },
+      icon: "fas fa-indent"
+    }, "Indent"));
     items.add('bbextend-size', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[size=24][/size]');
@@ -82,7 +85,6 @@ flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defend
       },
       icon: "fas fa-palette"
     }, "Color"));
-    items.add('bbextend-spacer4', m("li", null));
     items.add('bbextend-code', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[code][/code]');
