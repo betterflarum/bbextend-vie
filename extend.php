@@ -37,5 +37,13 @@ return [
 			'[indent={NUMBER}]{TEXT}[/indent]',
 			'<div style="padding-left: {NUMBER}px;">{TEXT}</div>'
 		);
+		$config->BBCodes->addCustom(
+			'[gdoc]{URL}[/gdoc]',
+			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
+		);
+		$config->BBCodes->addCustom(
+			'[gsheet]{URL}[/gsheet]',
+			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
+		);
 	})
 ];

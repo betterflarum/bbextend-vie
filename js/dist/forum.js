@@ -103,6 +103,18 @@ flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defend
       },
       icon: "fas fa-minus"
     }, "Horizontal Rule"));
+    items.add('bbextend-google-doc', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
+      onclick: function onclick() {
+        return _this.attrs.composer.editor.insertAtCursor('[gdoc][/gdoc]');
+      },
+      icon: "fas fa-file-word"
+    }, "Google Doc"));
+    items.add('bbextend-google-sheet', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
+      onclick: function onclick() {
+        return _this.attrs.composer.editor.insertAtCursor('[gsheet][/gsheet]');
+      },
+      icon: "fas fa-file-excel"
+    }, "Google Sheet"));
   });
 });
 
