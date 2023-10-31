@@ -38,12 +38,8 @@ return [
 			'<div style="padding-left: {NUMBER}px;">{TEXT}</div>'
 		);
 		$config->BBCodes->addCustom(
-			'[gdoc={URL}]',
-			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
-		);
-		$config->BBCodes->addCustom(
-			'[gsheet={URL}]',
-			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
+			'[gdoc]{URL}[/gdoc]',
+			'<div class="bbextend-gdoc">{URL}</div>'
 		);
 	})
 ];
