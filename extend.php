@@ -38,11 +38,11 @@ return [
 			'<div style="padding-left: {NUMBER}px;">{TEXT}</div>'
 		);
 		$config->BBCodes->addCustom(
-			'[gdoc]{URL}[/gdoc]',
+			'[gdoc={URL}]',
 			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
 		);
 		$config->BBCodes->addCustom(
-			'[gsheet]{URL}[/gsheet]',
+			'[gsheet={URL}]',
 			'<iframe src="{URL}/pub?embedded=true" style="width: 100%;"></iframe>'
 		);
 	})

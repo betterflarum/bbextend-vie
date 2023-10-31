@@ -77,12 +77,12 @@ app.initializers.add('defendervex/bbextend', () => {
 		));
 
 		items.add('bbextend-google-doc', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[gdoc][/gdoc]')} icon="fas fa-file-word">
+			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[gdoc=]')} icon="fas fa-file-word">
 				Google Doc
 			</TextEditorButton>
 		));
 		items.add('bbextend-google-sheet', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[gsheet][/gsheet]')} icon="fas fa-file-excel">
+			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[gsheet=]')} icon="fas fa-file-excel">
 				Google Sheet
 			</TextEditorButton>
 		));
