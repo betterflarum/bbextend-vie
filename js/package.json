@@ -1,7 +1,7 @@
 {
     "name": "@defendervex/bbextend",
-    "private": true,
-    "version": "0.0.0",
+    "private": false,
+    "version": "0.1.0",
     "devDependencies": {
         "flarum-webpack-config": "^2.0.0",
         "webpack": "^5.65.0",
