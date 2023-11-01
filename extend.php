@@ -39,7 +39,7 @@ return [
 		);
 		$config->BBCodes->addCustom(
 			'[gdoc]{URL}[/gdoc]',
-			'<div class="bbextend-gdoc">{URL}</div>'
+			'<div class="bbextend-gdoc"><a href="{URL}" target="_blank"><i class="fas fa-file-word"></i> View Google Doc</a></div>'
 		);
 	})
 ];
