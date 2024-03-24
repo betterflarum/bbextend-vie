@@ -1,5 +1,5 @@
 {
-    "name": "defendervex/bbextend",
+    "name": "betterflarum/bbextend-vie",
     "description": "Add new BBCode options and editor buttons.",
     "keywords": [
         "flarum"
@@ -11,7 +11,7 @@
     },
     "authors": [
         {
-            "name": "DefenderVex",
+            "name": "betterflarum",
             "role": "Developer"
         }
     ],
