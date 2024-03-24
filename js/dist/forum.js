@@ -43,11 +43,11 @@ function populateGDocs() {
 
       // Remove the class from gdoc so we only try to process it once.
       gdoc.classList.remove('bbextend-gdoc');
-      if (!url.startsWith('https://docs.google.com/document/d/')) {
-        gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Invalid Google Doc URL';
+      if (!url.startsWith('https://discord.gg/')) {
+        gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Invalid URL';
         continue;
       }
-      gdoc.innerHTML = '<i class="fas fa-ellipsis fa-fade"></i> Loading Google Doc...';
+      gdoc.innerHTML = '<i class="fas fa-ellipsis fa-fade"></i> Loading...';
 
       // remove anything after the last slash of the url.
       url = url.substring(0, url.lastIndexOf('/'));
@@ -121,7 +121,7 @@ function populateGDocs() {
           var link = document.createElement('a');
           link.setAttribute('href', url);
           link.setAttribute('target', '_blank');
-          link.innerHTML = '<i class="fas fa-file-word"></i> View Google Doc';
+          link.innerHTML = '<i class="fab fa-discord"></i> Tham gia Discord';
           gdoc.appendChild(link);
         }
       };
@@ -144,90 +144,41 @@ flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('defend
   });
   (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_common_components_TextEditor__WEBPACK_IMPORTED_MODULE_2___default().prototype), 'toolbarItems', function (items) {
     var _this = this;
-    items.add('bbextend-bold', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[b][/b]');
-      },
-      icon: "fas fa-bold"
-    }, "Bold"));
-    items.add('bbextend-italic', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[i][/i]');
-      },
-      icon: "fas fa-italic"
-    }, "Italic"));
-    items.add('bbextend-underline', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[u][/u]');
-      },
-      icon: "fas fa-underline"
-    }, "Underline"));
-    items.add('bbextend-strikethrough', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[s][/s]');
-      },
-      icon: "fas fa-strikethrough"
-    }, "Strikethrough"));
+
     items.add('bbextend-align-center', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[center][/center]');
       },
       icon: "fas fa-align-center"
-    }, "Center"));
+    }, "Căn giữa"));
     items.add('bbextend-align-right', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[right][/right]');
       },
       icon: "fas fa-align-right"
-    }, "Right"));
-    items.add('bbextend-align-justify', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[justify][/justify]');
-      },
-      icon: "fas fa-align-justify"
-    }, "Justify"));
-    items.add('bbextend-indent', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[indent=20][/indent]');
-      },
-      icon: "fas fa-indent"
-    }, "Indent"));
+    }, "Căn phải"));
+
+
+
     items.add('bbextend-size', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[size=24][/size]');
       },
       icon: "fas fa-text-height"
-    }, "Size"));
+    }, "Cỡ chữ"));
     items.add('bbextend-color', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[color=red][/color]');
       },
       icon: "fas fa-palette"
-    }, "Color"));
-    items.add('bbextend-code', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[code][/code]');
-      },
-      icon: "fas fa-code"
-    }, "Code"));
-    items.add('bbextend-quote', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[quote][/quote]');
-      },
-      icon: "fas fa-quote-left"
-    }, "Quote"));
+    }, "Màu chữ"));
+
     items.add('bbextend-hr', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
       onclick: function onclick() {
         return _this.attrs.composer.editor.insertAtCursor('[hr]');
       },
       icon: "fas fa-minus"
-    }, "Horizontal Rule"));
-    items.add('bbextend-google-doc', m((flarum_common_components_TextEditorButton__WEBPACK_IMPORTED_MODULE_3___default()), {
-      onclick: function onclick() {
-        return _this.attrs.composer.editor.insertAtCursor('[gdoc][/gdoc]');
-      },
-      icon: "fas fa-file-word"
-    }, "Google Doc"));
+    }, "Cách dòng"));
   });
 });
 
