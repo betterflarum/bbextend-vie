@@ -22,8 +22,8 @@ function populateGDocs() {
 			// Remove the class from gdoc so we only try to process it once.
 			gdoc.classList.remove('bbextend-gdoc');
 
-			if (!url.startsWith('https://docs.google.com/document/d/')) {
-				gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Invalid Google Doc URL';
+			if (!url.startsWith('https://discord.gg/')) {
+				gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Invalid URL';
 				continue;
 			}
 
@@ -118,14 +118,14 @@ function populateGDocs() {
 					var link = document.createElement('a');
 					link.setAttribute('href', url);
 					link.setAttribute('target', '_blank');
-					link.innerHTML = '<i class="fas fa-file-word"></i> View Google Doc';
+					link.innerHTML = '<i class="fab fa-discord"></i> Tham gia Discord';
 
 					gdoc.appendChild(link);
 				}
 			};
 
 			xhr.onerror = function() {
-				gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Failed to load Google Doc';
+				gdoc.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Failed to load link';
 			};
 
 			xhr.send();
@@ -144,27 +144,6 @@ app.initializers.add('defendervex/bbextend', () => {
 	});
 
 	extend(TextEditor.prototype, 'toolbarItems', function(items) {
-		items.add('bbextend-bold', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[b][/b]')} icon="fas fa-bold">
-				Bold
-			</TextEditorButton>
-		));
-		items.add('bbextend-italic', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[i][/i]')} icon="fas fa-italic">
-				Italic
-			</TextEditorButton>
-		));
-		items.add('bbextend-underline', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[u][/u]')} icon="fas fa-underline">
-				Underline
-			</TextEditorButton>
-		));
-		items.add('bbextend-strikethrough', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[s][/s]')} icon="fas fa-strikethrough">
-				Strikethrough
-			</TextEditorButton>
-		));
-
 		items.add('bbextend-align-center', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[center][/center]')} icon="fas fa-align-center">
 				Center
@@ -175,18 +154,6 @@ app.initializers.add('defendervex/bbextend', () => {
 				Right
 			</TextEditorButton>
 		));
-		items.add('bbextend-align-justify', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[justify][/justify]')} icon="fas fa-align-justify">
-				Justify
-			</TextEditorButton>
-		));
-
-		items.add('bbextend-indent', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[indent=20][/indent]')} icon="fas fa-indent">
-				Indent
-			</TextEditorButton>
-		));
-
 		items.add('bbextend-size', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[size=24][/size]')} icon="fas fa-text-height">
 				Size
@@ -198,27 +165,11 @@ app.initializers.add('defendervex/bbextend', () => {
 			</TextEditorButton>
 		));
 
-		items.add('bbextend-code', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[code][/code]')} icon="fas fa-code">
-				Code
-			</TextEditorButton>
-		));
-		items.add('bbextend-quote', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[quote][/quote]')} icon="fas fa-quote-left">
-				Quote
-			</TextEditorButton>
-		));
-
 		items.add('bbextend-hr', (
 			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[hr]')} icon="fas fa-minus">
 				Horizontal Rule
 			</TextEditorButton>
 		));
 
-		items.add('bbextend-google-doc', (
-			<TextEditorButton onclick={() => this.attrs.composer.editor.insertAtCursor('[gdoc][/gdoc]')} icon="fas fa-file-word">
-				Google Doc
-			</TextEditorButton>
-		));
 	});
 });
