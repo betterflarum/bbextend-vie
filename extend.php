@@ -26,20 +26,8 @@ return [
 			'<div style="text-align: right;">{TEXT}</div>'
 		);
 		$config->BBCodes->addCustom(
-			'[justify]{TEXT}[/justify]',
-			'<div style="text-align: justify;">{TEXT}</div>'
-		);
-		$config->BBCodes->addCustom(
 			'[hr]',
 			'<hr style="border-top: 1px solid var(--muted-color);">'
-		);
-		$config->BBCodes->addCustom(
-			'[indent={NUMBER}]{TEXT}[/indent]',
-			'<div style="padding-left: {NUMBER}px;">{TEXT}</div>'
-		);
-		$config->BBCodes->addCustom(
-			'[gdoc]{URL}[/gdoc]',
-			'<div class="bbextend-gdoc"><a href="{URL}" target="_blank"><i class="fas fa-file-word"></i> View Google Doc</a></div>'
 		);
 	})
 ];
